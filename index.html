@@ -221,17 +221,19 @@ When you click the <strong>Download</strong> button on your Security Profile in 
 <p>To run the install script, open a <strong>terminal</strong> by clicking on the console window in the Pi’s toolbar in the upper-left corner of the screen (or just use your existing terminal window). You should see a <strong>setup.sh</strong> script in your <em>/home/pi/</em> directory. This pulls the credentials from your <strong>config.json</strong> file to run the install script. To launch the setup script, copy and paste the following command into your terminal window and hit return:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/pi/
-sudo bash setup.sh config.json -m /home/pi/Smart-screen-sdk-test/
+sudo bash setup.sh config.json [-s 1234]
 </code></pre></div></div>
 
-<p><img src="./Alexa Skill development workshop/configTerm.png" alt="run_script"></p>
+<p><img src="./Alexa Skill development workshop/run-script._TTH_.png" alt="run_script"></p>
+
+<p>Note that the field in double brackets is the Device Serial Number which will be unique to each instance of the SDK. In this case it's pre-populated with 1234.</p>
 
 <p>Type <strong>“AGREE”</strong> when it prompts you to accept the licensing terms from our third-party libraries.  Unless, of course, you disagree!</p>
 
 <p>This will kick off the installation process which could normally take over 20 minutes, but for reInvent we’ve precompiled the image to save you some time.</p>
 
 <p>Once you’ve finished compiling, you should see a success screen.  If your device freezes up - don’t worry, just restart by unplugging your Pi’s power cord.  When you get back to your desktop, re-run the above setup.sh command to finish your install.</p>
-
+<p><img src="./Alexa Skill development workshop/complete._TTH_.png" alt="Complete_"></p>
 <p>Now you just need to launch the sample app and get a refresh token from AVS so your device can authenticate with the cloud via Login With Amazon (LWA).</p>
 
 
