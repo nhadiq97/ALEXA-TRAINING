@@ -85,7 +85,7 @@
   </article>
 
   <article class="">
-    <a name="/2-get-dev-account" href="https://avs-sdk-workshop.github.io/#/2-get-dev-account"><h2>2. Get an Amazon Dev Account</h2></a>
+    <a name="/2-get-dev-account" ><h2>2. Get an Amazon Dev Account</h2></a>
     <section class="body" style="display: none;">	
       <h3 class="steps" id="register-for-an-amazon-developer-account">Register for an Amazon Developer Account</h3>
 
@@ -195,6 +195,28 @@
       <h3 id="run-the-install-script">Run the Install Script</h3>
 
 <p>You are now ready to run the install script. This will install all dependencies, including the <strong>Wake Word Engine</strong> (WWE) from Sensory.  The WWE compares incoming audio to an onboard model of a wake word (<strong>“Alexa”</strong>) and will initiate the transmission of audio to the cloud when triggered.  Note that this WWE is provided for <strong>prototyping purposes only</strong> and would need to be licensed for a commercial device.  The AVS Device SDK is modular and flexible. When you’re ready to build your product, you can choose any WWE you prefer. Remember that for AVS products, the wake word must be <strong>Alexa</strong> so that your customers aren’t confused about how to interact with your device.</p>
+
+<p>To run the install script, open a <strong>terminal</strong> by clicking on the console window in the Pi’s toolbar in the upper-left corner of the screen (or just use your existing terminal window).  Copy and paste the following command into your terminal window and hit return to upgrade apt-get.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get upgrade
+</code></pre></div></div>
+
+<p>Now, let's get the SDK installation and configuration scripts. Copy and paste the following into your terminal and hit return:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://raw.githubusercontent.com/alexa/avs-device-sdk/master/tools/Install/setup.sh \
+wget https://raw.githubusercontent.com/alexa/avs-device-sdk/master/tools/Install/genConfig.sh \
+wget https://raw.githubusercontent.com/alexa/avs-device-sdk/master/tools/Install/pi.sh
+</code></pre></div></div>
+
+<p><img src="./Alexa Skill development workshop/updateGIT._TTH_.png" alt="run_script"></p>
+
+<h3>Download your credentials</h3>
+<p>If you didn't already save it to your Pi when creating your product profile, it's time to get your config.json file onto your client device. Start by opening a browser and logging into your <a href="https://developer.amazon.com/avs/home.html#/avs/homes">AVS dashboard</a> Click on your Product Name, it should be AVS Tutorials Project or whatever you named it when creating the product profile.</p>
+<p>on the left side you should see Product Details. Select Security Profile below that and choose <strong>Other devices and platforms</strong> from the Web - Android/Kindle - iOS - Other devices and platforms menu.
+
+When you click the <strong>Download</strong> button on your Security Profile in your web browser, you'll see a config.json file appear in your home/pi/downloads folder. In the file manager, copy this file from the /downloads folder and place it in your home/pi folder</p>
+
+<h3>Build the AVS Device SDK</h3>
 
 <p>To run the install script, open a <strong>terminal</strong> by clicking on the console window in the Pi’s toolbar in the upper-left corner of the screen (or just use your existing terminal window). You should see a <strong>setup.sh</strong> script in your <em>/home/pi/</em> directory. This pulls the credentials from your <strong>config.json</strong> file to run the install script. To launch the setup script, copy and paste the following command into your terminal window and hit return:</p>
 
