@@ -383,8 +383,43 @@ npm run-script build
 
     </section>
   </article>
+</section><!--section for setting up ends-->
 
-</section>
+
+
+<!--Section for alexa skill tutorial-->
+<section id="content"><a class="control hide">Hide all</a><a class="control show">Show all</a>
+   <article class="">
+    <a name="/1/2-Settingup-lambda" ><h2>2.Setting up lambda function</h2></a>
+    <section class="body" style="display: none;"> 
+      <h3 id="Setting-up-lambda">Setting up lambda</h3>
+
+<p>n the first step of this guide, we built the Voice User Interface (VUI) for our Alexa skill. On this page, we will be creating an AWS Lambda function using <a href="http://aws.amazon.com/">Amazon Web Services.</a> You can read more about <a href="http://aws.amazon.com/lambda">what a Lambda function is,</a> but for the purposes of this guide, what you need to know is that AWS Lambda is where our code lives. When a user asks Alexa to use our skill, it is our AWS Lambda function that interprets the appropriate interaction, and provides the conversation back to the user.</p>
+
+<p><strong>1.Go to http://aws.amazon.com</strong> and sign in to the console.</p>
+<p><strong>2.Click "Services" at the top of the screen, and type "Lambda" in the search box.</strong> You can also find Lambda in the list of services. It is in the "Compute" section.</p>
+
+<p><img src="./Alexa Skill development workshop/2-2-services-lambda.png" alt="config-lambda"></p>
+
+<p><strong>3.Check your AWS region.</strong> AWS Lambda only works with the Alexa Skills Kit in these regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Tokyo) and EU (Ireland). Make sure you choose the region closest to your customers.</p>
+
+<p><strong>4.Click the orange "Create function" button.</strong> It should be near the top of your screen. (If you don't see this button, it is because you haven't created a Lambda function before. Click the blue "Get Started" button near the center of your screen.)</p>
+
+<p><strong>5.</strong>There are three boxes labeled "Author from scratch", "Blueprints" and "Serverless Application Repository". Click the radio button in the box titled <strong>"Blue prints" </strong> and then <strong>Enter fact to search for the application repository named alexa-skill-kit-sdk-factskill.</strong></p>
+
+<p><strong>6.</strong>Click on the Application package</p>
+
+<p><strong>7.</strong>Click configure button on the bottom right corner of the screen.</p>
+
+<p><strong>8.</strong>Enter a Function Name,for option <strong>role choose create a custom role from the dropdown menu.<strong> In the new screen that appears click Allow at the bottom right corner</strong></p>
+
+<p><strong>9.</strong>Once you are done with entering the above details click the <strong>Orange Create function button on the bottom right corner of the screen.</strong></p>
+
+<p><strong>10.</strong>You should see the Amazon Resource Name (ARN) for this function in the top right corner of the page. (You may need to scroll back up.) Copy the ARN value for this Lambda function for use in the next section of the guide.</p>
+
+    </section>
+  </article>
+</section><!--Section for alexa skill tutorial ends-->
 
 
   <!--[if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
