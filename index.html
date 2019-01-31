@@ -163,6 +163,14 @@
     </ul>
   </li>
 </ul>
+<li>Select <strong>Web</strong> from the <em>Web - Android/Kindle - iOS - Other devices and platforms</em> options in the <strong>Platform Information</strong> section.</li>
+<ul>
+  <li>add  <strong>https://localhost:3000</strong> to Allowed origin.</li>
+  <li>add  <strong>https://localhost:3000/authresponse</strong> to Allowed return.</li>
+  <li>click  <strong>update</strong></li>
+</ol>
+
+<p><img src="./Alexa Skill development workshop/WEBEDIT.png" alt="platforms"></p>
 
 <p>Congratulations!  You now have access to the Alexa Voice Service APIs.  Click OK on the prompt to continue.  Your device should now be listed on your <a href="https://developer.amazon.com/avs/home.html#/avs/homes">AVS dashboard</a>.</p>
 
@@ -236,6 +244,20 @@ sudo bash setup.sh config.json [-s 1234]
 <p><img src="./Alexa Skill development workshop/complete._TTH_.png" alt="Complete_"></p>
 <p>Now you just need to launch the sample app and get a refresh token from AVS so your device can authenticate with the cloud via Login With Amazon (LWA).</p>
 
+<h3>Disable bluealsa using the below mentioned code</h3>
+<p><strong>ps aux | grep bluealsa</strong></p>
+<p><strong>sudo kill "pid"</strong></p>
+
+<h3>Install pulse audio using the below mentioned code</h3>
+<p><strong>apt-get install pulseaudio</strong></p>
+
+<h3>Testing the microphone</h3>
+<p>1)Record a soundwave by typing the command</p>
+
+  <p><strong>arecord -D plughw:1,0 -d 3 test.wav </strong></p>
+<p>2)Play the wave file by typing the command</p>
+
+<p><strong>aplay test.wav</strong></p>
 
     </section>
   </article>
