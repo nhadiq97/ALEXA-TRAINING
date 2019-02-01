@@ -31,6 +31,8 @@
       <li><a href="#/9-Modify-your-AFML">8. Customize your Renderer</a></li>
 
       <li><a href="#/8-Add-visuals">9. Change your Home Screen</a></li>
+
+       <li><a href="#/10-troubleshoot">10. Troubleshooting Tips</a></li>
     </ul>
   </li>
 
@@ -244,20 +246,6 @@ sudo bash setup.sh config.json [-s 1234]
 <p><img src="./Alexa Skill development workshop/complete._TTH_.png" alt="Complete_"></p>
 <p>Now you just need to launch the sample app and get a refresh token from AVS so your device can authenticate with the cloud via Login With Amazon (LWA).</p>
 
-<h3>Disable bluealsa using the below mentioned code</h3>
-<p><strong>ps aux | grep bluealsa</strong></p>
-<p><strong>sudo kill "pid"</strong></p>
-
-<h3>Install pulse audio using the below mentioned code</h3>
-<p><strong>apt-get install pulseaudio</strong></p>
-
-<h3>Testing the microphone</h3>
-<p>1)Record a soundwave by typing the command</p>
-
-  <p><strong>arecord -D plughw:1,0 -d 3 test.wav </strong></p>
-<p>2)Play the wave file by typing the command</p>
-
-<p><strong>aplay test.wav</strong></p>
 
     </section>
   </article>
@@ -405,7 +393,47 @@ npm run-script build
 
     </section>
   </article>
-</section><!--section for setting up ends-->
+
+
+<article class="">
+    <a name="/10-troubleshoot" ><h2>10. Troubleshooting Tips</h2></a>
+    <section class="body" style="display: none;"> 
+      <h2 id="modify-your-home-screen">Troubleshooting Tips</h2>
+      <h3 style="color:red"> If no audio fails but alexa runs </h3>
+<h4>Disable bluealsa using the below mentioned code</h4>
+<p><strong>ps aux | grep bluealsa</strong></p>
+<p><strong>sudo kill "pid"</strong></p>
+
+<h4>Install pulse audio using the below mentioned code</h4>
+<p><strong>apt-get install pulseaudio</strong></p>
+<h3 style="color:red"> Testing the microphone </h3>
+<h3>Testing the microphone</h3>
+<p>1)Record a soundwave by typing the command</p>
+
+  <p><strong>arecord -D plughw:1,0 -d 3 test.wav </strong></p>
+<p>2)Play the wave file by typing the command</p>
+
+<p><strong>aplay test.wav</strong></p>
+
+<h3 style="color:red"> failed to create sample app </h3>
+<p>Most probable cause Disconnected or faulty microphone</p>
+
+<h3 style="color:red"> Directory exist but not empty </h3>
+<p><strong>cd /third-party</strong></p>
+<p><strong>sudo rm -r alexa-rpi</strong></p>
+
+<p style="color:green">Kindly let us know of anymore errors you face by mailing to us at:contact@4notfour.com</p>
+<p><strong>We will troubleshoot and post the method soon</strong></p>
+
+
+
+
+
+       </section>
+  </article>
+</section>
+
+<!--section for setting up ends-->
 
 
 
